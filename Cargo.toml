@@ -1,0 +1,7 @@
+[package]
+name = "realm_of_power"
+version = "0.0.1"
+authors = ["Gipson62", "BlueElham"]
+
+[dependencies]
+blue_engine = "0.5.0"
