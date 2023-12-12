@@ -1,7 +1,11 @@
 [package]
 name = "realm_of_power"
 version = "0.0.1"
-authors = ["Gipson62", "BlueElham"]
+authors = ["Gipson62", "Elham Aryanpur <elhamaryanpur5@gmail.com>"]
+edition = "2021"
+license = "MIT"
 
 [dependencies]
 blue_engine = "0.5.0"
+blue_engine_utilities = { git = "https://github.com/AryanpurTech/BlueEngineUtilities", ref = "dc7ee4de4fe36d94d35c180cb971ddc5c6d354f7" }
+anyhow = "1.0"

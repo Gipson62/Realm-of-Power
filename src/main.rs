@@ -1,23 +1,7 @@
-extern crate blue_engine;
-
-use blue_engine::{
-    header::{ Engine, ObjectSettings },
-    primitive_shapes::triangle
-};
+use realm_of_power::Game;
 
 fn main() {
-    // initialize the engine
-    let mut engine = Engine::new().expect("engine couldn't be initialized");
+    let game = Game::new().expect("Failed to create game");
 
-    // create a triangle
-    triangle("my triangle", ObjectSettings::default(), &mut engine.renderer, &mut engine.objects).unwrap();
-
-    // run the engine
-    engine
-        .update_loop(move |_, _, obj, _, _, _| {
-            if let Some (t) = obj.get_mut("my triangle") {
-                t.set_rotatation(0.5, blue_engine::RotateAxis::Y)
-            };
-        })
-        .expect("Error during update loop");
+    game.run().expect("Failed to run game");
 }
